@@ -10,18 +10,18 @@ import torch
 from tqdm import tqdm
 import natsort
 
-from Alphapose.detector.apis import get_detector
-from Alphapose.trackers.tracker_api import Tracker
-from Alphapose.trackers.tracker_cfg import cfg as tcfg
-from Alphapose.trackers import track
-from Alphapose.alphapose.models import builder
-from Alphapose.alphapose.utils.config import update_config
-from Alphapose.alphapose.utils.detector import DetectionLoader
-from Alphapose.alphapose.utils.file_detector import FileDetectionLoader
-from Alphapose.alphapose.utils.transforms import flip, flip_heatmap
-from Alphapose.alphapose.utils.vis import getTime
-from Alphapose.alphapose.utils.webcam_detector import WebCamDetectionLoader
-from Alphapose.alphapose.utils.writer import DataWriter
+from ..detector.apis import get_detector
+from ..trackers.tracker_api import Tracker
+from ..trackers.tracker_cfg import cfg as tcfg
+from ..trackers import track
+from ..alphapose.models import builder
+from ..alphapose.utils.config import update_config
+from ..alphapose.utils.detector import DetectionLoader
+from ..alphapose.utils.file_detector import FileDetectionLoader
+from ..alphapose.utils.transforms import flip, flip_heatmap
+from ..alphapose.utils.vis import getTime
+from ..alphapose.utils.webcam_detector import WebCamDetectionLoader
+from ..alphapose.utils.writer import DataWriter
 
 """----------------------------- Demo options -----------------------------"""
 parser = argparse.ArgumentParser(description='AlphaPose Demo')

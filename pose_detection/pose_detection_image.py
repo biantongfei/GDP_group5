@@ -6,12 +6,12 @@ from tqdm import tqdm
 import numpy as np
 import time
 
-from .Alphapose.alphapose.utils.config import update_config
-from .Alphapose.alphapose.utils.detector import DetectionLoader
-from .Alphapose.detector.apis import get_detector
-from .Alphapose.alphapose.models import builder
-from .Alphapose.alphapose.utils.writer import DataWriter
-from .Alphapose.alphapose.utils.vis import getTime
+from Alphapose.alphapose.utils.config import update_config
+from Alphapose.alphapose.utils.detector import DetectionLoader
+from Alphapose.detector.apis import get_detector
+from Alphapose.alphapose.models import builder
+from Alphapose.alphapose.utils.writer import DataWriter
+from Alphapose.alphapose.utils.vis import getTime
 
 print('finish import')
 
