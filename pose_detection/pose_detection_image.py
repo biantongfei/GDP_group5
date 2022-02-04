@@ -96,9 +96,9 @@ def pose_detection_image(img, format='coco'):
     args.pose_flow = False
     args.pose_track = False
 
-    if not args.sp:
-        torch.multiprocessing.set_start_method('forkserver', force=True)
-        torch.multiprocessing.set_sharing_strategy('file_system')
+    # if not args.sp:
+    #     torch.multiprocessing.set_start_method('forkserver', force=True)
+    #     torch.multiprocessing.set_sharing_strategy('file_system')
 
     inputimg = args.inputimg
     args.inputpath = os.path.split(inputimg)[0]
