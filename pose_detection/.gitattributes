@@ -1,1 +1,1 @@
-Alphapose/pretrained_models/fast_res50_256x192.pth filter=lfs diff=lfs merge=lfs -text
+Alphapose/detector/yolo/data/yolov3-spp.weights filter=lfs diff=lfs merge=lfs -text
