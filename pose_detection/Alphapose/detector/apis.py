@@ -11,7 +11,6 @@ def get_detector(opt=None):
     if opt.detector == 'yolo':
         from Alphapose.detector.yolo_api import YOLODetector
         from Alphapose.detector.yolo_cfg import cfg
-        print(YOLODetector(cfg, opt),'---------yolo----------')
         return YOLODetector(cfg, opt)
     elif opt.detector == 'tracker':
         from Alphapose.detector.tracker_api import Tracker

@@ -97,7 +97,7 @@ def pose_detection_image(img, format='coco'):
     im_names = [os.path.split(inputimg)[1]]
 
     # Load detection loader
-    det_loader = DetectionLoader(im_names, get_detector(args), cfg, args, batchSize=args.detbatch, mode='image',
+    det_loader = DetectionLoader(im_names, get_detector(args), cfg, args, batchSize=args.detbatch,
                                  queueSize=args.qsize)
     det_worker = det_loader.start()
 
@@ -178,7 +178,7 @@ def pose_detection_image(img, format='coco'):
         print('An error as above occurs when processing the images, please check it')
         pass
     except KeyboardInterrupt:
-        print_finish_info()
+        print_finish_info(args)
         # Thread won't be killed when press Ctrl+C
         if args.sp:
             det_loader.terminate()
