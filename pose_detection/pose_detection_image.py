@@ -31,7 +31,7 @@ def pose_detection_image(img, format='coco'):
                         default='Alphapose/configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml',
                         help='experiment configure file name')
     parser.add_argument('--checkpoint', type=str,
-                        default='Alphapose/pretrained_models/fast_421_res152_256x192.pth',
+                        default='Alphapose/pretrained_models/fast_res50_256x192.pth',
                         help='checkpoint file name')
     parser.add_argument('--sp', default=False, action='store_true',
                         help='Use single process for pytorch')
