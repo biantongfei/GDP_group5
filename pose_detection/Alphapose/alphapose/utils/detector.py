@@ -15,7 +15,7 @@ from Alphapose.alphapose.models import builder
 
 
 class DetectionLoader():
-    def __init__(self, input_source, detector, cfg, opt, mode='image', batchSize=1, queueSize=4):
+    def __init__(self, input_source, detector, cfg, opt, mode='image', batchSize=1, queueSize=1):
         self.cfg = cfg
         self.opt = opt
         self.mode = mode
