@@ -36,7 +36,6 @@ class YOLODetector(BaseDetector):
         self.detector_opt = opt
         self.model_cfg = cfg.get('CONFIG', './yolo/cfg/yolov3-spp.cfg')
         self.model_weights = cfg.get('WEIGHTS', './yolo/data/yolov3-spp.weights')
-        print(self.model_cfg, self.model_weights)
         self.inp_dim = cfg.get('INP_DIM', 608)
         self.nms_thres = cfg.get('NMS_THRES', 0.6)
         self.confidence = 0.3 if (False if not hasattr(opt, 'tracking') else opt.tracking) else cfg.get('CONFIDENCE',
