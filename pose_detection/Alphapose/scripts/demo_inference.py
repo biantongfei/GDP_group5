@@ -9,19 +9,22 @@ import numpy as np
 import torch
 from tqdm import tqdm
 import natsort
+sys.path.append('../detector')
+sys.path.append('../trackers')
+sys.path.append('../alphapose')
 
-from ..detector.apis import get_detector
-from ..trackers.tracker_api import Tracker
-from ..trackers.tracker_cfg import cfg as tcfg
-from ..trackers import track
-from ..alphapose.models import builder
-from ..alphapose.utils.config import update_config
-from ..alphapose.utils.detector import DetectionLoader
-from ..alphapose.utils.file_detector import FileDetectionLoader
-from ..alphapose.utils.transforms import flip, flip_heatmap
-from ..alphapose.utils.vis import getTime
-from ..alphapose.utils.webcam_detector import WebCamDetectionLoader
-from ..alphapose.utils.writer import DataWriter
+from detector.apis import get_detector
+from trackers.tracker_api import Tracker
+from trackers.tracker_cfg import cfg as tcfg
+from trackers import track
+from alphapose.models import builder
+from alphapose.utils.config import update_config
+from alphapose.utils.detector import DetectionLoader
+from alphapose.utils.file_detector import FileDetectionLoader
+from alphapose.utils.transforms import flip, flip_heatmap
+from alphapose.utils.vis import getTime
+from alphapose.utils.webcam_detector import WebCamDetectionLoader
+from alphapose.utils.writer import DataWriter
 
 """----------------------------- Demo options -----------------------------"""
 parser = argparse.ArgumentParser(description='AlphaPose Demo')
