@@ -1,1 +1,1 @@
-pose_detection/Alphapose/pretrained_models/fast_421_res152_256x192.pth filter=lfs diff=lfs merge=lfs -text
+Alphapose/pretrained_models/fast_res50_256x192.pth filter=lfs diff=lfs merge=lfs -text
