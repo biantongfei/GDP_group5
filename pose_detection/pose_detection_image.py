@@ -13,6 +13,7 @@ from Alphapose.alphapose.models import builder
 from Alphapose.alphapose.utils.writer import DataWriter
 from Alphapose.alphapose.utils.vis import getTime
 
+print('finish import')
 
 def print_finish_info(args):
     print('===========================> Finish Model Running.')
