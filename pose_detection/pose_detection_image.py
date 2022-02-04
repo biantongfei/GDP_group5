@@ -73,6 +73,14 @@ def pose_detection_image(img, format='coco'):
                         help='enable flip testing')
     parser.add_argument('--debug', default=False, action='store_true',
                         help='print detail information')
+    parser.add_argument('--video', dest='video',
+                        help='video-name', default="")
+    parser.add_argument('--webcam', dest='webcam', type=int,
+                        help='webcam number', default=-1)
+    parser.add_argument('--save_video', dest='save_video',
+                        help='whether to save rendered video', default=False, action='store_true')
+    parser.add_argument('--vis_fast', dest='vis_fast',
+                        help='use fast rendering', action='store_true', default=False)
 
     args = parser.parse_args()
     cfg = update_config(args.cfg)
