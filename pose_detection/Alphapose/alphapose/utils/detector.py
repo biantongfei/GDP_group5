@@ -73,6 +73,7 @@ class DetectionLoader():
             self.image_queue = mp.Queue(maxsize=queueSize)
             self.det_queue = mp.Queue(maxsize=10 * queueSize)
             self.pose_queue = mp.Queue(maxsize=10 * queueSize)
+            print(self.image_queue,'------imgae_queue----------')
 
     def start_worker(self, target):
         if self.opt.sp:

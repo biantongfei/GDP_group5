@@ -49,7 +49,7 @@ def pose_detection_image(img, format='coco'):
                         help='output-directory', default="output/images")
     parser.add_argument('--save_img', default=True, action='store_true',
                         help='save result as image')
-    parser.add_argument('--vis', default=True, action='store_true',
+    parser.add_argument('--vis', default=False, action='store_true',
                         help='visualize image')
     parser.add_argument('--showbox', default=False, action='store_true',
                         help='visualize human bbox')
@@ -67,7 +67,7 @@ def pose_detection_image(img, format='coco'):
                         help='save the result json as coco format, using image index(int) instead of image name(str)')
     parser.add_argument('--gpus', type=str, dest='gpus', default="0",
                         help='choose which cuda device to use by index and input comma to use multi gpus, e.g. 0,1,2,3. (input -1 for cpu only)')
-    parser.add_argument('--qsize', type=int, dest='qsize', default=1024,
+    parser.add_argument('--qsize', type=int, dest='qsize', default=16,
                         help='the length of result buffer, where reducing it will lower requirement of cpu memory')
     parser.add_argument('--flip', default=False, action='store_true',
                         help='enable flip testing')
