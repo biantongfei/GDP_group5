@@ -13,8 +13,6 @@ from Alphapose.alphapose.models import builder
 from Alphapose.alphapose.utils.writer import DataWriter
 from Alphapose.alphapose.utils.vis import getTime
 
-print('finish import')
-
 
 def print_finish_info(args):
     print('===========================> Finish Model Running.')
@@ -109,7 +107,7 @@ def pose_detection_image(img, format='coco'):
     # Load detection loader
     det_loader = DetectionLoader(im_names, get_detector(args), cfg, args, batchSize=args.detbatch,
                                  queueSize=args.qsize)
-    det_worker = det_loader.start()
+    det_loader.start()
 
     # Load pose model
     pose_model = builder.build_sppe(cfg.MODEL, preset_cfg=cfg.DATA_PRESET)
@@ -119,6 +117,7 @@ def pose_detection_image(img, format='coco'):
     pose_dataset = builder.retrieve_dataset(cfg.DATASET.TRAIN)
     if len(args.gpus) > 1:
         pose_model = torch.nn.DataParallel(pose_model, device_ids=args.gpus).to(args.device)
+        print(pose_model, 'model')
     else:
         pose_model.to(args.device)
     pose_model.eval()
