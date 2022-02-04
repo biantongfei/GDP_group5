@@ -56,7 +56,7 @@ class PoseFlowWrapper():
 
     def convert_results_to_no_track(self, alphapose_results):
         # INPUT:
-        #   alphapose_results: the results of pose detection given by pose_nms,
+        #   alphapose_results: the results of pose_detection given by pose_nms,
         #   not the final version for saving. Data array's format is torch.FloatTensor.
         #   format: {"imgname": str, "result": [{'keypoints': [17,2], 'kp_score': [17,], 'proposal_score': float},...]}
         # OUTPUT:
