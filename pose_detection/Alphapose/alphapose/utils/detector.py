@@ -3,7 +3,7 @@ import sys
 from threading import Thread
 from queue import Queue
 
-sys.path.append('./Alphapose/alphapose')
+sys.path.append('../..')
 import cv2
 import numpy as np
 
