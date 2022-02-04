@@ -84,7 +84,7 @@ def pose_detection_image(img, format='coco'):
     args.device = torch.device("cuda:" + str(args.gpus[0]) if args.gpus[0] >= 0 else "cpu")
     args.detbatch = args.detbatch * len(args.gpus)
     args.posebatch = args.posebatch * len(args.gpus)
-    args.tracking = args.pose_track or args.pose_flow or args.detector == 'tracker'
+    args.tracking = False
 
     if not args.sp:
         torch.multiprocessing.set_start_method('forkserver', force=True)
