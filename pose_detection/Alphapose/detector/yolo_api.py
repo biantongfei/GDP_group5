@@ -24,7 +24,7 @@ from apis import BaseDetector
 #If you force to compile extension on Windows and ensure appropriate visual studio
 #is intalled, you can try to use these ext_modules.
 if platform.system() != 'Windows':
-    from detector.nms import nms_wrapper
+    from nms import nms_wrapper
 
 
 class YOLODetector(BaseDetector):
