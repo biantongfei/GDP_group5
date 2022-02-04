@@ -15,6 +15,7 @@ from Alphapose.alphapose.utils.vis import getTime
 
 print('finish import')
 
+
 def print_finish_info(args):
     print('===========================> Finish Model Running.')
     if (args.save_img or args.save_video) and not args.vis_fast:
@@ -26,10 +27,10 @@ def print_finish_info(args):
 def pose_detection_image(img, format='coco'):
     # check input params
     parser = argparse.ArgumentParser(description='AlphaPose Demo')
-    parser.add_argument('--cfg', type=str, required=True,
+    parser.add_argument('--cfg', type=str,
                         default='Alphapose/configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml',
                         help='experiment configure file name')
-    parser.add_argument('--checkpoint', type=str, required=True,
+    parser.add_argument('--checkpoint', type=str,
                         default='Alphapose/pretrained_models/fast_421_res152_256x192.pth',
                         help='checkpoint file name')
     parser.add_argument('--sp', default=False, action='store_true',
