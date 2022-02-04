@@ -89,7 +89,8 @@ def pose_detection_image(img, format='coco'):
         args.sp = True
 
     args.gpus = [int(i) for i in args.gpus.split(',')] if torch.cuda.device_count() >= 1 else [-1]
-    args.device = torch.device("cuda:" + str(args.gpus[0]) if args.gpus[0] >= 0 else "cpu")
+    args.device='cpu'
+    # args.device = torch.device("cuda:" + str(args.gpus[0]) if args.gpus[0] >= 0 else "cpu")
     args.detbatch = args.detbatch * len(args.gpus)
     args.posebatch = args.posebatch * len(args.gpus)
     args.tracking = False
