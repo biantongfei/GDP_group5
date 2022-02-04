@@ -208,4 +208,4 @@ def pose_detection_image(img, format='coco'):
 
 
 if __name__ == '__main__':
-    pose_detection_image('input/images/train_1003.jpg')
+    pose_detection_image('input/images/train_1003.png')
