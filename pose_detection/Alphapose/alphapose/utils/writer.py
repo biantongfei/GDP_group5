@@ -8,8 +8,8 @@ import numpy as np
 import torch
 import torch.multiprocessing as mp
 
-from alphapose.utils.transforms import get_func_heatmap_to_coord
-from alphapose.utils.pPose_nms import pose_nms, write_json
+from Alphapose.alphapose.utils.transforms import get_func_heatmap_to_coord
+from Alphapose.alphapose.utils.pPose_nms import pose_nms, write_json
 
 DEFAULT_VIDEO_SAVE_OPT = {
     'savepath': 'examples/res/1.mp4',
