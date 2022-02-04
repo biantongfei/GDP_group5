@@ -40,11 +40,11 @@ def pose_detection_image(img, format='coco'):
     parser.add_argument('--detfile', dest='detfile',
                         help='detection result file', default="")
     parser.add_argument('--indir', dest='inputpath',
-                        help='image-directory', default="")
+                        help='image-directory', default="input/images")
     parser.add_argument('--list', dest='inputlist',
                         help='image-list', default="")
     parser.add_argument('--image', dest='inputimg',
-                        help='image-name', default=img)
+                        help='image-name', default='')
     parser.add_argument('--outdir', dest='outputpath',
                         help='output-directory', default="output/images")
     parser.add_argument('--save_img', default=True, action='store_true',
