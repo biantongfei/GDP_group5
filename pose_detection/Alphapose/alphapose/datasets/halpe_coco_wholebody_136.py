@@ -10,8 +10,8 @@ import numpy as np
 from tkinter import _flatten
 from pycocotools.coco import COCO
 
-from alphapose.models.builder import DATASET
-from alphapose.utils.bbox import bbox_clip_xyxy, bbox_xywh_to_xyxy
+from Alphapose.alphapose.models.builder import DATASET
+from Alphapose.alphapose.utils.bbox import bbox_clip_xyxy, bbox_xywh_to_xyxy
 
 from .custom import CustomDataset
 
