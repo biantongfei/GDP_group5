@@ -40,7 +40,7 @@ def pose_detection_image(img, format='coco'):
     parser.add_argument('--detfile', dest='detfile',
                         help='detection result file', default="")
     parser.add_argument('--indir', dest='inputpath',
-                        help='image-directory', default="input/images")
+                        help='image-directory', default="Alphapose/examples/demo")
     parser.add_argument('--list', dest='inputlist',
                         help='image-list', default="")
     parser.add_argument('--image', dest='inputimg',
