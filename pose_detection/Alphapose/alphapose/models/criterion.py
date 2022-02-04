@@ -7,7 +7,7 @@ import torch.nn as nn
 
 from .builder import LOSS
 
-from alphapose.utils.transforms import _integral_tensor
+from Alphapose.alphapose.utils.transforms import _integral_tensor
 
 
 class IngetralCoordinate(torch.autograd.Function):
