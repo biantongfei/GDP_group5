@@ -11,7 +11,7 @@ import torch
 import torch.multiprocessing as mp
 
 from Alphapose.alphapose.utils.presets import SimpleTransform
-from alphapose.models import builder
+from Alphapose.alphapose.models import builder
 
 
 class DetectionLoader():
