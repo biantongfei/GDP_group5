@@ -120,6 +120,7 @@ class DetectionLoader():
         queue.put(item)
 
     def wait_and_get(self, queue):
+        print(queue,'queue----------')
         return queue.get()
 
     def image_preprocess(self):
