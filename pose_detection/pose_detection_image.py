@@ -105,9 +105,9 @@ def pose_detection_image(img, format='coco'):
     im_names = [os.path.split(inputimg)[1]]
 
     # Load detection loader
-    print(im_names,'---name---')
     det_loader = DetectionLoader(im_names, get_detector(args), cfg, args, batchSize=args.detbatch,
                                  queueSize=args.qsize)
+    print(det_loader,'loader--------')
     det_worker = det_loader.start()
 
     # Load pose model
