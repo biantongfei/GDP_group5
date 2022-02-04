@@ -1,6 +1,7 @@
 from torch import nn
-
-from alphapose.utils import Registry, build_from_cfg, retrieve_from_cfg
+import sys
+sys.path.append('..')
+from utils import Registry, build_from_cfg, retrieve_from_cfg
 
 
 SPPE = Registry('sppe')
