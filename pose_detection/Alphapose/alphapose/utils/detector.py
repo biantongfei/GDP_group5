@@ -3,15 +3,15 @@ import sys
 from threading import Thread
 from queue import Queue
 
-sys.path.append('..')
+
 import cv2
 import numpy as np
 
 import torch
 import torch.multiprocessing as mp
 
-from presets import SimpleTransform
-from models import builder
+from Alphapose.alphapose.utils.presets import SimpleTransform
+from alphapose.models import builder
 
 
 class DetectionLoader():
