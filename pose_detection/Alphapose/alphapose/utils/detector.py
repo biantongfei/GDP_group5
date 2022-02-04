@@ -86,15 +86,18 @@ class DetectionLoader():
     def start(self):
         # start a thread to pre process images for object detection
         if self.mode == 'image':
-            image_preprocess_worker = self.start_worker(self.image_preprocess)
+            # image_preprocess_worker = self.start_worker(self.image_preprocess)
+            self.image_preprocess()
         elif self.mode == 'video':
-            image_preprocess_worker = self.start_worker(self.frame_preprocess)
+            # image_preprocess_worker = self.start_worker(self.frame_preprocess)
+            self.frame_preprocess()
         # start a thread to detect human in images
-        image_detection_worker = self.start_worker(self.image_detection)
+        # image_detection_worker = self.start_worker(self.image_detection)
+        self.image_detection()
         # start a thread to post process cropped human image for pose estimation
-        image_postprocess_worker = self.start_worker(self.image_postprocess)
-
-        return [image_preprocess_worker, image_detection_worker, image_postprocess_worker]
+        # image_postprocess_worker = self.start_worker(self.image_postprocess)
+        self.image_postprocess()
+        # return [image_preprocess_worker, image_detection_worker, image_postprocess_worker]
 
     def stop(self):
         # clear queues
