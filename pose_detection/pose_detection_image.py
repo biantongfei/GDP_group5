@@ -107,8 +107,8 @@ def pose_detection_image(img, format='coco'):
     # Load detection loader
     det_loader = DetectionLoader(im_names, get_detector(args), cfg, args, batchSize=args.detbatch,
                                  queueSize=args.qsize)
-    print(det_loader,'loader--------')
     det_worker = det_loader.start()
+    print(det_worker, 'worker-------')
 
     # Load pose model
     pose_model = builder.build_sppe(cfg.MODEL, preset_cfg=cfg.DATA_PRESET)
