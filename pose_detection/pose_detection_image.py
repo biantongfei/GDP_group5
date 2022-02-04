@@ -65,7 +65,7 @@ def pose_detection_image(img, format='coco'):
                         help='pose estimation maximum batch size PER GPU')
     parser.add_argument('--eval', dest='eval', default=False, action='store_true',
                         help='save the result json as coco format, using image index(int) instead of image name(str)')
-    parser.add_argument('--gpus', type=str, dest='gpus', default="2",
+    parser.add_argument('--gpus', type=str, dest='gpus', default="0",
                         help='choose which cuda device to use by index and input comma to use multi gpus, e.g. 0,1,2,3. (input -1 for cpu only)')
     parser.add_argument('--qsize', type=int, dest='qsize', default=1,
                         help='the length of result buffer, where reducing it will lower requirement of cpu memory')
