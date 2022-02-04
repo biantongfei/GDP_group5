@@ -8,8 +8,8 @@ import os
 
 import numpy as np
 
-from alphapose.models.builder import DATASET
-from alphapose.utils.bbox import bbox_clip_xyxy, bbox_xywh_to_xyxy
+from Alphapose.alphapose.models.builder import DATASET
+from Alphpose.alphapose.utils.bbox import bbox_clip_xyxy, bbox_xywh_to_xyxy
 
 from .custom import CustomDataset
 
