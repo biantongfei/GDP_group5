@@ -108,11 +108,11 @@ def pose_detection_image(img, format='coco'):
     det_loader = DetectionLoader(im_names, get_detector(args), cfg, args, batchSize=args.detbatch,
                                  queueSize=args.qsize)
     det_loader.start()
+    print(det_loader, 'loader------')
 
     # Load pose model
     pose_model = builder.build_sppe(cfg.MODEL, preset_cfg=cfg.DATA_PRESET)
     print('Loading pose model from %s...' % (args.checkpoint,))
-    print(args.device, 'device--------')
     pose_model.load_state_dict(torch.load(args.checkpoint, map_location=args.device))
     pose_dataset = builder.retrieve_dataset(cfg.DATASET.TRAIN)
     if len(args.gpus) > 1:
