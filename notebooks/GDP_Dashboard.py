@@ -482,4 +482,4 @@ def load_chosen_area(value, plot_type):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True) 
