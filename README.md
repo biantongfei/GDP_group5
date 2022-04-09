@@ -1,4 +1,5 @@
-# Group Design Project (Group 5) 
+# Airport Integrated Crowd Monitoring and Social Distancing Analysis Platform
+- Group Design Project (Group 5) 
 - Cranfield University, Applied Artificial Intelligence MSc.
 
 ## Authors
@@ -21,6 +22,11 @@ The key innovation of the work is the combining of various novel areas of comput
 
 The outputs of the system are presented to the end-user using a custom dashboard application.
 
+All code for the project has been developed in Python and associated open-source packages, including Numpy, OpenCV, MXNet, TensorFlow, GluonCV, Flask and Dash.
+
+
+## Main System Modelling Process
+
 The overall modelling process can be broken down into three distinct phases:
 
 1. Video input and pre-processing, followed by extraction of human pose features using crowd-pose estimation.
@@ -30,24 +36,30 @@ The overall modelling process can be broken down into three distinct phases:
 3. Integration and presentation of results, using a customised dashboard application.
 
 
+
 ![System Overview](examples/system_overview.jpg?raw=True "Simplified System Overview Diagram")
 
 
-The downstream modelling tasks apply a series of computer-vision and applied AI techniques to the extracted pose features for each frame, as summarised in the diagram below.
+## Downstream Models Summary (Phase 2)
+
+The downstream modelling tasks apply a series of computer-vision and applied AI techniques to the extracted pose features for each frame. There are five downstream modelling tasks in total, including person counting, distance estimation, pose behaviour classification, mask classification, and group clustering. See detailed process below for more information on each of these, including the associated code files.
+
+The overall purpose of the downstream models, along with how they work, is illustrated in the diagram below.
 
 
 ![Downstream Modelling Overview](examples/downstream_models.jpg?raw=True "Illustration of the downstream modelling process")
 
 
-## System Modelling Loop
+
+## Main System Modelling Code and Detailed Process (Phases 1 & 2)
 
 The main system modelling loop extracts pose features from all persons in a given input video stream (i.e. .mp4, .mov video file, or a live-stream) using OpenCV and AlphaPose (with YOLO object detector as pre-estimation human bounding boxes, and GluonCV for AlphaPose estimation). Following this, the five downstream modelling tasks are applied to the pose features to obtain a collection of useful crowd-analytics and social distancing results, including:
 
 1. Persons count within a given scene.
-2. Distance estimation between all persons in a scene, including whether violation according to a threshold has occurred for each person.
-3. Mask classification, which provides predictions for all people on whether they are wearing a mask or not.
-4. Pose behaviour classification, which predicts the current behaviour status (including standing, walking, sitting, lying and other) for all persons in a scene.
-5. Group clustering / social analysis, which estimates the number of distinct groups of people in a scene, along with their associated group sizes.
+2. Distance estimation between all persons in a scene, including whether violation according to a threshold has occurred for each person (using functions defined in `distance_estimation.py`).
+3. Mask classification, which provides predictions for all people on whether they are wearing a mask or not (using functions defined in `mask_classification.py`).
+4. Pose behaviour classification, which predicts the current behaviour status (including standing, walking, sitting, lying and other) for all persons in a scene (using functions defined in `behaviour_classification.py`).
+5. Group clustering / social analysis, which estimates the number of distinct groups of people in a scene, along with their associated group sizes (using functions defined in `distance_estimation.py`).
 
 All of these results are obtained frame-by-frame on the given input video source, at the desired FPS setting given in the configuration file `system_configuration.py`.
 
