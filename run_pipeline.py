@@ -9,19 +9,17 @@ will be saved to the chosen directory given when calling the script.
 Guidance:
 
 Run the script with a source file (--file argument) full path argument and 
-specified destination dir (--dst argument). The source file should be a 
-set of daily reviews, with filename formatted as 'YYYYMMDD' + 'ML' or 'DU', 
-with '.xslx' file type. An example valid name is '20211130DU.xlsx'.
+specified area name (within airport context, e.g. security) (--area_name argument). 
+The source file should be a video souce, either .mp4, .mov etc, which should
+be located within the dir given by area_name.
 
-By default, the random forest (MVP) model will be used, as taken from the
-project models directory. However this can be changed using the optional
-model argument (--model), which should specify the model name located in
-the models directory.
-
-    python run_inference.py --file '20211130ML.xlsx' --dst data/predictions
+    python run_pipeline.py --file Security.mp4 --area_name Security
 
 Optional arguments include the following:
-    - '--model, -m' : Model to be used, will default to MVP model.
+    - '--pose_vid, -m' : Whether to save pose features as video results.
+    - '--heatmap' -h' : Whether to save heatmap on scene as video results.
+    - '--data_dir' -d' : Directory containing main data for project.
+    - '--model_dir' -m' : Directory containing pre-traine models for project.
 
 
 Author: BD Fraser, https://github.com/BenjaminFraser
