@@ -77,7 +77,7 @@ All system modelling and configuration must be set appropriately in `system_conf
 
 ## Dashboard Application
 
-The dashboard application is developed using Flask and Dash. It provides a summary of the results provided by the system, and allows exploration of these in real-time for each area throughout the airport. 
+The dashboard application is developed using Flask and Dash (`system_configuration.py`). It provides a summary of the results provided by the system, and allows exploration of these in real-time for each area throughout the airport. 
 
 It also allows the extraction and saving of all results from each area as a .csv, for further processing and analysis as required.
 
@@ -87,10 +87,16 @@ Provide suitable area directories have been established in the project directory
 
 The application can then be accessed at localhost (http://127.0.0.1:8050/) by default.
 
-An example of the application is shown below.
+Some illustrative examples of the final dashboard application are given below.
 
 
-![Dashboard Overview](examples/dashboard_example.jpg?raw=True "Example of the dashboard design.")
+![Dashboard Example 1](examples/dashboard_example.jpg?raw=True "Example of the dashboard design.")
 
 
+![Dashboard Example 2](examples/dashboard_example_2.jpg?raw=True "Another example of the dashboard results (1).")
 
+
+![Dashboard Example 3](examples/dashboard_example_3.jpg?raw=True "Another example of the dashboard results (2).")
+
+
+![Dashboard Example 4](examples/dashboard_example_4.jpg?raw=True "Another example of the dashboard results (3).")
